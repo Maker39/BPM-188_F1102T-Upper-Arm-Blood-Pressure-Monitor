@@ -1,1 +1,182 @@
+substitutions:
+  bpm_mac_address: AA:BB:CC:DD:EE:FF
+  key: "API-KEY"
+  ssid: "Bpm-Gateway Fallback Hotspot"
+  password: "password"
+#  service_uuid: 000018f0-0000-1000-8000-00805f9b34fb
+#  characteristic_uuid: 00002af0-0000-1000-8000-00805f9b34fb
+# Known state:
+# 02-40-DD-02-00 PUMP
+# 02.40.DD.0C.3C.FF.FF.FF.FF.00.00.00.00.04.00.00.00.A9 (18) No PUMP err 4
+# 02.40.DD.0F.1C.00.A7.00.4B.00.01.00.4B.00.17.01.01.08.0C.3B (20)   (arythm)
+#
+# 02-40-DD-0F-1C OK (FINISH)
+# 02-40-50-FF-03-00 Bye-Bye
+#
+  
+esphome: 
+  name: bpm-gateway
+  friendly_name: BPM-Gateway
+
+esp32:
+  board: airm2m_core_esp32c3
+  framework:
+    type: arduino
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: ${key}
+
+ota:
+  - platform: esphome
+    password: !secret ota_password
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: ${ssid}
+    password: ${password}
+
+captive_portal:
+
+web_server:
+  port: 80
+  version: 3
+
+time:
+  - platform: homeassistant
+    id: homeassistant_time
+
+# Example configuration entry
+switch:
+  - platform: restart
+    name: "Restart"
+
+# Enable Bluetooth scanning for this ESP32
+esp32_ble_tracker:
+
+# CHANGE mac_address
+ble_client:
+  - mac_address: ${bpm_mac_address}
+    id: bpm_188
+
+sensor:
+  #- platform: ble_rssi
+  #  service_uuid: '18f0'
+  #  name: "BLE Test Service 16 bit RSSI value"
+  - platform: ble_rssi
+    mac_address: ${bpm_mac_address}
+    name: "BLE RSSI"
+  - platform: wifi_signal
+    name: "WiFi RSSI"
+    update_interval: 5min
+  - platform: internal_temperature
+    name: "Internal Temperature"  
+  - platform: template
+    name: "Error"
+    id: error
+    device_class: ""
+    state_class: ""
+    unit_of_measurement: ""
+    accuracy_decimals: 0
+    filters:
+     - timeout: 600s 
+  - platform: template
+    name: "SYS"
+    id: systolic
+    device_class: "pressure"
+    state_class: "measurement"
+    unit_of_measurement: "mmHg"
+    accuracy_decimals: 0
+    filters:
+     - timeout: 300s
+  - platform: template
+    name: "DIA"
+    id: diastolic
+    device_class: "pressure"
+    state_class: "measurement"
+    unit_of_measurement: "mmHg"
+    accuracy_decimals: 0
+    filters:
+     - timeout: 300s
+  - platform: template
+    name: "B9"
+    id: b9
+    device_class: "pressure"
+    state_class: "measurement"
+    unit_of_measurement: ""
+    accuracy_decimals: 0
+    filters:
+     - timeout: 300s
+  - platform: template
+    name: "B10"
+    id: b10
+    device_class: "pressure"
+    state_class: "measurement"
+    unit_of_measurement: ""
+    accuracy_decimals: 0
+    filters:
+     - timeout: 300s
+  - platform: template
+    name: "B11"
+    id: b11
+    device_class: "pressure"
+    state_class: "measurement"
+    unit_of_measurement: ""
+    accuracy_decimals: 0
+    filters:
+     - timeout: 300s
+  - platform: template
+    name: "Pulse"
+    id: heartrate
+    device_class: "frequency"
+    state_class: "measurement"
+    unit_of_measurement: "bpm"
+    accuracy_decimals: 0
+    filters:
+     - timeout: 300s
+  - platform: template
+    name: "User"
+    id: user
+    device_class: "pressure"
+    state_class: "measurement"
+    unit_of_measurement: ""
+    accuracy_decimals: 0
+    filters:
+     - timeout: 300s
+  - platform: ble_client
+    name: "BPM-188"
+    type: characteristic
+    service_uuid: "18f0"
+    characteristic_uuid: "2af0"
+    icon: "mdi:heart"
+    update_interval: never
+    notify: true
+    lambda: |-
+      uint8_t* pdata = (uint8_t*) x.data();
+       if (pdata[3] == 0x0F) 
+        {float sys =  (pdata[6]);
+        float dia =  (pdata[8]);
+        float x9 =  (pdata[9]);
+        float x10 =  (pdata[10]);
+        float x11 =  (pdata[11]);
+        float pulse =  (pdata[12]);
+        float usr =  (pdata[13]);
+        id(systolic).publish_state(sys);
+        id(diastolic).publish_state(dia);
+        id(b9).publish_state(x9);
+        id(b10).publish_state(x10);
+        id(b11).publish_state(x11);
+        id(heartrate).publish_state(pulse);
+        id(user).publish_state(usr);}
+       else if(pdata[3] == 0x0c)
+        {float err =  (pdata[13]);
+        id(error).publish_state(err);}
+      return (float)x.size();
 
