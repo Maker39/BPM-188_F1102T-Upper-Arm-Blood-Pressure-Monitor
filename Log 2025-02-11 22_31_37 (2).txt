@@ -1,0 +1,300 @@
+nRF Connect, 2025-02-11
+BPM-188 (EF:7B:A1:59:C8:75)
+D	22:31:37.184	[Broadcast] Action received: android.bluetooth.device.action.ACL_CONNECTED
+I	22:31:37.184	[Server] Server started
+V	22:31:37.199	Heart Rate (0x180D)
+- Heart Rate Measurement [N] (0x2A37)
+   Client Characteristic Configuration (0x2902)
+- Body Sensor Location [R] (0x2A38)
+- Heart Rate Control Point [W] (0x2A39)
+Unknown Service (0000aaa0-0000-1000-8000-aabbccddeeff)
+- Unknown Characteristic [N R] (0000aaa1-0000-1000-8000-aabbccddeeff)
+   Client Characteristic Configuration (0x2902)
+   Unknown Descriptor (0000aab0-0000-1000-8000-aabbccddeeff)
+   Characteristic User Description (0x2901)
+   Characteristic Presentation Format (0x2904)
+- Unknown Characteristic [I W WNR] (0000aaa2-0000-1000-8000-aabbccddeeff)
+   Client Characteristic Configuration (0x2902)
+User Data (0x181C)
+- First Name [R W] (0x2A8A)
+- Last Name [R W] (0x2A90)
+- Gender [R W] (0x2A8C)
+D	22:31:37.207	[Server callback] Connection state changed with status: 0 and new state: CONNECTED (2)
+I	22:31:37.207	[Server] Device with address EF:7B:A1:59:C8:75 connected
+V	22:31:37.575	Connecting to EF:7B:A1:59:C8:75...
+D	22:31:37.575	gatt = device.connectGatt(autoConnect = false, TRANSPORT_LE, opportunistic = true, preferred PHY = LE 1M) (hidden)
+D	22:31:37.582	[Callback] Connection state changed with status: 0 and new state: CONNECTED (2)
+I	22:31:37.582	Connected to EF:7B:A1:59:C8:75
+D	22:31:37.582	wait(1600ms)
+I	22:31:38.148	Connection parameters updated (interval: 48.75ms, latency: 0, timeout: 5000ms)
+I	22:31:38.601	Connection parameters updated (interval: 15.0ms, latency: 0, timeout: 5000ms)
+I	22:31:38.760	Connection parameters updated (interval: 26.25ms, latency: 0, timeout: 6000ms)
+V	22:31:39.182	Discovering services...
+D	22:31:39.182	gatt.discoverServices()
+D	22:31:39.186	[Callback] Services discovered with status: 0
+I	22:31:39.186	Services discovered
+V	22:31:39.193	Unknown Service (000018f0-0000-1000-8000-00805f9b34fb)
+- Unknown Characteristic [N] (00002af0-0000-1000-8000-00805f9b34fb)
+   Client Characteristic Configuration (0x2902)
+- Unknown Characteristic [W] (00002af1-0000-1000-8000-00805f9b34fb)
+   Characteristic User Description (0x2901)
+D	22:31:39.193	gatt.setCharacteristicNotification(00002af0-0000-1000-8000-00805f9b34fb, true)
+I	22:31:45.509	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-00-00-9F
+A	22:31:45.509	"(0x) 02-40-DD-02-00-00-9F" received
+I	22:31:46.007	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-00-17-88
+A	22:31:46.007	"(0x) 02-40-DD-02-00-17-88" received
+I	22:31:46.795	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-00-8F-10
+A	22:31:46.795	"(0x) 02-40-DD-02-00-8F-10" received
+I	22:31:47.634	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-01-00-9E
+A	22:31:47.634	"(0x) 02-40-DD-02-01-00-9E" received
+I	22:31:48.396	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-01-7B-E5
+A	22:31:48.396	"(0x) 02-40-DD-02-01-7B-E5" received
+I	22:31:49.183	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-01-EB-75
+A	22:31:49.183	"(0x) 02-40-DD-02-01-EB-75" received
+I	22:31:49.997	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-02-70-ED
+A	22:31:49.997	"(0x) 02-40-DD-02-02-70-ED" received
+I	22:31:50.784	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-03-0C-90
+A	22:31:50.784	"(0x) 02-40-DD-02-03-0C-90" received
+I	22:31:51.625	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-03-AD-31
+A	22:31:51.625	"(0x) 02-40-DD-02-03-AD-31" received
+I	22:31:52.410	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-04-53-C8
+A	22:31:52.410	"(0x) 02-40-DD-02-04-53-C8" received
+I	22:31:53.199	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-05-01-9B
+A	22:31:53.199	"(0x) 02-40-DD-02-05-01-9B" received
+I	22:31:53.987	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-05-C4-5E
+A	22:31:53.987	"(0x) 02-40-DD-02-05-C4-5E" received
+I	22:31:54.801	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-06-62-FB
+A	22:31:54.801	"(0x) 02-40-DD-02-06-62-FB" received
+I	22:31:55.588	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-07-0C-94
+A	22:31:55.588	"(0x) 02-40-DD-02-07-0C-94" received
+I	22:31:56.429	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-07-E5-7D
+A	22:31:56.429	"(0x) 02-40-DD-02-07-E5-7D" received
+I	22:31:57.189	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-08-CE-59
+A	22:31:57.189	"(0x) 02-40-DD-02-08-CE-59" received
+I	22:31:58.004	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-09-D0-46
+A	22:31:58.004	"(0x) 02-40-DD-02-09-D0-46" received
+I	22:31:58.790	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-0A-DA-4F
+A	22:31:58.790	"(0x) 02-40-DD-02-0A-DA-4F" received
+I	22:31:59.632	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-0B-FE-6A
+A	22:31:59.632	"(0x) 02-40-DD-02-0B-FE-6A" received
+I	22:32:00.391	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-0D-2E-BC
+A	22:32:00.391	"(0x) 02-40-DD-02-0D-2E-BC" received
+I	22:32:01.206	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-0E-67-F6
+A	22:32:01.206	"(0x) 02-40-DD-02-0E-67-F6" received
+I	22:32:01.993	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-0F-BE-2E
+A	22:32:01.993	"(0x) 02-40-DD-02-0F-BE-2E" received
+I	22:32:02.808	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-11-3C-B2
+A	22:32:02.808	"(0x) 02-40-DD-02-11-3C-B2" received
+I	22:32:03.593	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-12-BD-30
+A	22:32:03.593	"(0x) 02-40-DD-02-12-BD-30" received
+I	22:32:04.408	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-14-41-CA
+A	22:32:04.408	"(0x) 02-40-DD-02-14-41-CA" received
+I	22:32:05.194	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-15-FE-74
+A	22:32:05.194	"(0x) 02-40-DD-02-15-FE-74" received
+I	22:32:05.982	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-17-CB-43
+A	22:32:05.982	"(0x) 02-40-DD-02-17-CB-43" received
+I	22:32:06.796	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-19-A0-26
+A	22:32:06.796	"(0x) 02-40-DD-02-19-A0-26" received
+I	22:32:07.583	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-1B-6F-EB
+A	22:32:07.583	"(0x) 02-40-DD-02-1B-6F-EB" received
+I	22:32:08.397	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-1D-41-C3
+A	22:32:08.398	"(0x) 02-40-DD-02-1D-41-C3" received
+I	22:32:09.185	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-1F-34-B4
+A	22:32:09.185	"(0x) 02-40-DD-02-1F-34-B4" received
+I	22:32:09.999	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-20-C4-7B
+A	22:32:09.999	"(0x) 02-40-DD-02-20-C4-7B" received
+I	22:32:10.786	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-21-DE-60
+A	22:32:10.786	"(0x) 02-40-DD-02-21-DE-60" received
+I	22:32:11.628	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-23-A1-1D
+A	22:32:11.628	"(0x) 02-40-DD-02-23-A1-1D" received
+I	22:32:12.388	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-25-66-DC
+A	22:32:12.388	"(0x) 02-40-DD-02-25-66-DC" received
+I	22:32:13.201	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-27-39-81
+A	22:32:13.201	"(0x) 02-40-DD-02-27-39-81" received
+I	22:32:13.989	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-29-0E-B8
+A	22:32:13.989	"(0x) 02-40-DD-02-29-0E-B8" received
+I	22:32:14.802	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-2B-20-94
+A	22:32:14.802	"(0x) 02-40-DD-02-2B-20-94" received
+I	22:32:15.592	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-2D-5B-E9
+A	22:32:15.592	"(0x) 02-40-DD-02-2D-5B-E9" received
+I	22:32:16.405	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-2E-64-D5
+A	22:32:16.405	"(0x) 02-40-DD-02-2E-64-D5" received
+I	22:32:17.193	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-2F-A9-19
+A	22:32:17.193	"(0x) 02-40-DD-02-2F-A9-19" received
+I	22:32:18.005	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-31-52-FC
+A	22:32:18.005	"(0x) 02-40-DD-02-31-52-FC" received
+I	22:32:18.795	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-32-F8-55
+A	22:32:18.795	"(0x) 02-40-DD-02-32-F8-55" received
+I	22:32:19.632	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-34-87-2C
+A	22:32:19.632	"(0x) 02-40-DD-02-34-87-2C" received
+I	22:32:20.396	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-36-4D-E4
+A	22:32:20.396	"(0x) 02-40-DD-02-36-4D-E4" received
+I	22:32:21.183	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-38-0A-AD
+A	22:32:21.183	"(0x) 02-40-DD-02-38-0A-AD" received
+I	22:32:21.997	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-3A-09-AC
+A	22:32:21.997	"(0x) 02-40-DD-02-3A-09-AC" received
+I	22:32:22.783	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-3B-5A-FE
+A	22:32:22.783	"(0x) 02-40-DD-02-3B-5A-FE" received
+I	22:32:23.624	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-3C-B3-10
+A	22:32:23.624	"(0x) 02-40-DD-02-3C-B3-10" received
+I	22:32:24.410	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-3E-65-C4
+A	22:32:24.410	"(0x) 02-40-DD-02-3E-65-C4" received
+I	22:32:25.200	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-40-01-DE
+A	22:32:25.200	"(0x) 02-40-DD-02-40-01-DE" received
+I	22:32:25.986	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-41-A8-76
+A	22:32:25.986	"(0x) 02-40-DD-02-41-A8-76" received
+I	22:32:26.800	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-43-58-84
+A	22:32:26.800	"(0x) 02-40-DD-02-43-58-84" received
+I	22:32:27.561	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-0F-1C-00-96-00-50-00-00-00-41-00-17-01-05-0A-1C-0C
+A	22:32:27.561	"(0x) 02-40-DD-0F-1C-00-96-00-50-00-00-00-41-00-17-01-05-0A-1C-0C" received
+I	22:33:58.073	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-50-FF-03-00
+A	22:33:58.073	"(0x) 02-40-50-FF-03-00" received
+D	22:33:58.283	[Server callback] Connection state changed with status: 0 and new state: DISCONNECTED (0)
+I	22:33:58.283	[Server] Device disconnected
+D	22:33:58.300	[Callback] Connection state changed with status: 19 and new state: DISCONNECTED (0)
+W	22:33:58.300	Connection terminated by peer (status 19)
+I	22:33:58.300	Disconnected
+D	22:33:58.326	[Broadcast] Action received: android.bluetooth.device.action.ACL_DISCONNECTED
+D	22:35:14.507	[Broadcast] Action received: android.bluetooth.device.action.BOND_STATE_CHANGED, bond state changed to: NONE (10), reason: REMOVED (9)
+I	22:35:14.507	Bond information lost, reason: REMOVED (9)
+D	22:35:29.875	[Server callback] Connection state changed with status: 0 and new state: CONNECTED (2)
+I	22:35:29.875	[Server] Device with address EF:7B:A1:59:C8:75 connected
+D	22:35:29.875	gatt.close()
+D	22:35:29.876	wait(200)
+D	22:35:29.885	[Broadcast] Action received: android.bluetooth.device.action.ACL_CONNECTED
+V	22:35:30.084	Connecting to EF:7B:A1:59:C8:75...
+D	22:35:30.085	gatt = device.connectGatt(autoConnect = false, TRANSPORT_LE, opportunistic = true, preferred PHY = LE 1M) (hidden)
+D	22:35:30.091	[Callback] Connection state changed with status: 0 and new state: CONNECTED (2)
+I	22:35:30.091	Connected to EF:7B:A1:59:C8:75
+V	22:35:30.103	Discovering services...
+D	22:35:30.103	gatt.discoverServices()
+I	22:35:30.298	Connection parameters updated (interval: 7.5ms, latency: 0, timeout: 5000ms)
+D	22:35:30.361	[Callback] Services discovered with status: 0
+I	22:35:30.361	Services discovered
+V	22:35:30.368	Unknown Service (000018f0-0000-1000-8000-00805f9b34fb)
+- Unknown Characteristic [N] (00002af0-0000-1000-8000-00805f9b34fb)
+   Client Characteristic Configuration (0x2902)
+- Unknown Characteristic [W] (00002af1-0000-1000-8000-00805f9b34fb)
+   Characteristic User Description (0x2901)
+D	22:35:30.368	gatt.setCharacteristicNotification(00002af0-0000-1000-8000-00805f9b34fb, true)
+I	22:35:30.454	Connection parameters updated (interval: 48.75ms, latency: 0, timeout: 5000ms)
+I	22:35:30.898	Connection parameters updated (interval: 15.0ms, latency: 0, timeout: 5000ms)
+I	22:35:31.053	Connection parameters updated (interval: 26.25ms, latency: 0, timeout: 6000ms)
+I	22:35:46.426	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-00-00-9F
+A	22:35:46.426	"(0x) 02-40-DD-02-00-00-9F" received
+I	22:35:46.909	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-00-04-9B
+A	22:35:46.909	"(0x) 02-40-DD-02-00-04-9B" received
+I	22:35:47.696	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-00-57-C8
+A	22:35:47.696	"(0x) 02-40-DD-02-00-57-C8" received
+I	22:35:48.536	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-00-93-0C
+A	22:35:48.536	"(0x) 02-40-DD-02-00-93-0C" received
+I	22:35:49.350	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-00-D7-48
+A	22:35:49.350	"(0x) 02-40-DD-02-00-D7-48" received
+I	22:35:50.086	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-01-1B-85
+A	22:35:50.086	"(0x) 02-40-DD-02-01-1B-85" received
+I	22:35:50.901	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-01-75-EB
+A	22:35:50.901	"(0x) 02-40-DD-02-01-75-EB" received
+I	22:35:51.687	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-01-E0-7E
+A	22:35:51.687	"(0x) 02-40-DD-02-01-E0-7E" received
+I	22:35:52.501	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-02-58-C5
+A	22:35:52.501	"(0x) 02-40-DD-02-02-58-C5" received
+I	22:35:53.287	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-02-E2-7F
+A	22:35:53.287	"(0x) 02-40-DD-02-02-E2-7F" received
+I	22:35:54.101	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-03-80-1C
+A	22:35:54.101	"(0x) 02-40-DD-02-03-80-1C" received
+I	22:35:54.913	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-04-1A-81
+A	22:35:54.913	"(0x) 02-40-DD-02-04-1A-81" received
+I	22:35:55.701	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-04-CB-50
+A	22:35:55.701	"(0x) 02-40-DD-02-04-CB-50" received
+I	22:35:56.489	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-05-9F-05
+A	22:35:56.489	"(0x) 02-40-DD-02-05-9F-05" received
+I	22:35:57.302	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-06-61-F8
+A	22:35:57.302	"(0x) 02-40-DD-02-06-61-F8" received
+I	22:35:58.090	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-07-04-9C
+A	22:35:58.090	"(0x) 02-40-DD-02-07-04-9C" received
+I	22:35:58.905	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-07-E0-78
+A	22:35:58.905	"(0x) 02-40-DD-02-07-E0-78" received
+I	22:35:59.692	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-08-B0-27
+A	22:35:59.692	"(0x) 02-40-DD-02-08-B0-27" received
+I	22:36:00.507	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-09-B3-25
+A	22:36:00.507	"(0x) 02-40-DD-02-09-B3-25" received
+I	22:36:01.296	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-0A-DB-4E
+A	22:36:01.296	"(0x) 02-40-DD-02-0A-DB-4E" received
+I	22:36:02.109	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-0C-1E-8D
+A	22:36:02.109	"(0x) 02-40-DD-02-0C-1E-8D" received
+I	22:36:02.895	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-0D-67-F5
+A	22:36:02.895	"(0x) 02-40-DD-02-0D-67-F5" received
+I	22:36:03.710	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-0E-D2-43
+A	22:36:03.710	"(0x) 02-40-DD-02-0E-D2-43" received
+I	22:36:04.497	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-10-50-DF
+A	22:36:04.497	"(0x) 02-40-DD-02-10-50-DF" received
+I	22:36:05.311	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-11-D0-5E
+A	22:36:05.311	"(0x) 02-40-DD-02-11-D0-5E" received
+I	22:36:06.099	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-13-84-08
+A	22:36:06.099	"(0x) 02-40-DD-02-13-84-08" received
+I	22:36:06.886	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-15-4B-C1
+A	22:36:06.886	"(0x) 02-40-DD-02-15-4B-C1" received
+I	22:36:07.700	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-17-2B-A3
+A	22:36:07.700	"(0x) 02-40-DD-02-17-2B-A3" received
+I	22:36:08.486	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-19-11-97
+A	22:36:08.486	"(0x) 02-40-DD-02-19-11-97" received
+I	22:36:09.302	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-1A-F4-71
+A	22:36:09.302	"(0x) 02-40-DD-02-1A-F4-71" received
+I	22:36:10.090	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-1C-E5-66
+A	22:36:10.090	"(0x) 02-40-DD-02-1C-E5-66" received
+I	22:36:10.902	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-1E-30-B1
+A	22:36:10.902	"(0x) 02-40-DD-02-1E-30-B1" received
+I	22:36:11.690	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-1F-D3-53
+A	22:36:11.690	"(0x) 02-40-DD-02-1F-D3-53" received
+I	22:36:12.531	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-21-A0-1E
+A	22:36:12.531	"(0x) 02-40-DD-02-21-A0-1E" received
+I	22:36:13.291	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-23-7F-C3
+A	22:36:13.291	"(0x) 02-40-DD-02-23-7F-C3" received
+I	22:36:14.105	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-25-60-DA
+A	22:36:14.105	"(0x) 02-40-DD-02-25-60-DA" received
+I	22:36:14.892	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-27-3D-85
+A	22:36:14.892	"(0x) 02-40-DD-02-27-3D-85" received
+I	22:36:15.706	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-29-33-85
+A	22:36:15.706	"(0x) 02-40-DD-02-29-33-85" received
+I	22:36:16.494	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-2B-65-D1
+A	22:36:16.494	"(0x) 02-40-DD-02-2B-65-D1" received
+I	22:36:17.309	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-2C-68-DB
+A	22:36:17.309	"(0x) 02-40-DD-02-2C-68-DB" received
+I	22:36:18.096	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-2D-A0-12
+A	22:36:18.096	"(0x) 02-40-DD-02-2D-A0-12" received
+I	22:36:18.909	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-2F-56-E6
+A	22:36:18.909	"(0x) 02-40-DD-02-2F-56-E6" received
+I	22:36:19.696	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-30-FB-54
+A	22:36:19.696	"(0x) 02-40-DD-02-30-FB-54" received
+I	22:36:20.537	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-32-B0-1D
+A	22:36:20.537	"(0x) 02-40-DD-02-32-B0-1D" received
+I	22:36:21.324	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-34-55-FE
+A	22:36:21.324	"(0x) 02-40-DD-02-34-55-FE" received
+I	22:36:22.111	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-36-07-AE
+A	22:36:22.111	"(0x) 02-40-DD-02-36-07-AE" received
+I	22:36:22.899	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-38-4C-EB
+A	22:36:22.899	"(0x) 02-40-DD-02-38-4C-EB" received
+I	22:36:23.686	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-39-70-D6
+A	22:36:23.686	"(0x) 02-40-DD-02-39-70-D6" received
+I	22:36:24.499	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-3A-D2-77
+A	22:36:24.499	"(0x) 02-40-DD-02-3A-D2-77" received
+I	22:36:25.287	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-3C-72-D1
+A	22:36:25.288	"(0x) 02-40-DD-02-3C-72-D1" received
+I	22:36:26.102	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-3E-03-A2
+A	22:36:26.102	"(0x) 02-40-DD-02-3E-03-A2" received
+I	22:36:26.890	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-3F-A1-01
+A	22:36:26.890	"(0x) 02-40-DD-02-3F-A1-01" received
+I	22:36:27.703	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-41-47-99
+A	22:36:27.703	"(0x) 02-40-DD-02-41-47-99" received
+I	22:36:28.490	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-02-43-00-DC
+A	22:36:28.490	"(0x) 02-40-DD-02-43-00-DC" received
+I	22:36:28.648	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-DD-0F-1C-00-90-00-4E-00-00-00-41-00-17-01-05-0A-20-28
+A	22:36:28.648	"(0x) 02-40-DD-0F-1C-00-90-00-4E-00-00-00-41-00-17-01-05-0A-20-28" received
+I	22:38:00.147	Notification received from 00002af0-0000-1000-8000-00805f9b34fb, value: (0x) 02-40-50-FF-03-00
+A	22:38:00.147	"(0x) 02-40-50-FF-03-00" received
+D	22:38:00.264	[Server callback] Connection state changed with status: 0 and new state: DISCONNECTED (0)
+I	22:38:00.264	[Server] Device disconnected
+D	22:38:00.280	[Callback] Connection state changed with status: 19 and new state: DISCONNECTED (0)
+W	22:38:00.280	Connection terminated by peer (status 19)
+I	22:38:00.280	Disconnected
+D	22:38:00.308	[Broadcast] Action received: android.bluetooth.device.action.ACL_DISCONNECTED
