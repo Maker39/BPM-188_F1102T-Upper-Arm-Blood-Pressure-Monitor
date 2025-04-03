@@ -4,7 +4,7 @@ BPM-188 https://sbershop.ru/catalog/sberdevices_sberzdorove/tonometr_sberzdorove
 
 #     Примеры ответа тонометра
 ###  Коды ошибок :  
-02.40.DD.0C.3C.FF.FF.FF.FF.00.00.00.00.02.00.00.00.AF (18) err 2 шевеление   
+02.40.DD.0C.3C.FF.FF.FF.FF.00.00.00.00.02.00.00.00.AF (18) err 2    
 02.40.DD.0C.3C.FF.FF.FF.FF.00.00.00.00.04.00.00.00.A9 (18) err 4 нет давления в манжете  
 02.40.DD.0C.3C.FF.FF.FF.FF.00.00.00.00.05.00.00.00.A8 (18) err 5 пережата трубка  
 
