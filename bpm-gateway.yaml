@@ -108,16 +108,16 @@ sensor:
   - platform: template
     name: "B9"
     id: b9
-    device_class: "pressure"
+    device_class: ""
     state_class: "measurement"
     unit_of_measurement: ""
     accuracy_decimals: 0
     filters:
      - timeout: 300s
   - platform: template
-    name: "B10"
+    name: "B10" # arythmia
     id: b10
-    device_class: "pressure"
+    device_class: ""
     state_class: "measurement"
     unit_of_measurement: ""
     accuracy_decimals: 0
@@ -126,7 +126,7 @@ sensor:
   - platform: template
     name: "B11"
     id: b11
-    device_class: "pressure"
+    device_class: ""
     state_class: "measurement"
     unit_of_measurement: ""
     accuracy_decimals: 0
